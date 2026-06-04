@@ -18,7 +18,6 @@
 | table_number | Integer |
 | capacity     | Integer |
 | description  | String  |
-| status       | String  |
 
 
 ## Сущность: Бронирование
