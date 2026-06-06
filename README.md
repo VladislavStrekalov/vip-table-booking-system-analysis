@@ -100,33 +100,6 @@
 
 ![BPMN Cancel Reservation](diagrams/bpmn-cancel-booking.png)
 
-## Структура проекта
-
-```text
-vip-table-booking-system-analysis
-│
-├── README.md
-│
-├── docs
-│   ├── functional-requirements.md
-│   ├── non-functional-requirements.md
-│   ├── use-cases.md
-│   ├── api-specification.md
-│   ├── bpmn.md
-│   └── sequence-diagrams.md
-│
-└── diagrams
-    ├── er-diagram.drawio
-    ├── er-diagram.png
-    ├── use-case-diagram.puml
-    ├── use-cases-diagram.png
-    ├── sequence-create-booking.puml
-    ├── sequence-create-booking.png
-    ├── bpmn-view-vip-table.png
-    ├── bpmn-create-booking.png
-    ├── bpmn-confirm-booking.png
-    └── bpmn-cancel-booking.png
-```
 
 ## Цель проекта для портфолио
 
