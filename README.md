@@ -67,6 +67,7 @@
 - [Нефункциональные требования](docs/non-functional-requirements.md)
 - [Use Cases](docs/use-cases.md)
 - [API Specification](docs/api-specification.md)
+- [OpenAPI Specification](docs/openapi.yaml)
 - [BPMN Диаграммы](docs/bpmn.md)
 - [Sequence Diagrams](docs/sequence-diagram.md)
 
