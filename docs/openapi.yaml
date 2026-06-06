@@ -1,0 +1,101 @@
+openapi: 3.0.3
+
+info:
+  title: VIP Table Booking API
+  description: API системы бронирования VIP-столиков
+  version: 1.0.0
+
+servers:
+  - url: https://api.vip-booking.com
+
+paths:
+
+  /tables:
+    get:
+      summary: Получить список VIP-столиков
+      responses:
+        '200':
+          description: Список столиков успешно получен
+
+  /tables/{id}/availability:
+    get:
+      summary: Проверить доступность столика
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Информация о доступности столика
+
+  /reservations:
+    post:
+      summary: Создать бронирование
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateReservationRequest'
+      responses:
+        '201':
+          description: Бронирование создано
+
+  /reservations/{id}/confirm:
+    patch:
+      summary: Подтвердить бронирование
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Бронирование подтверждено
+
+  /reservations/{id}/cancel:
+    patch:
+      summary: Отменить бронирование
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Бронирование отменено
+
+components:
+
+  schemas:
+
+    CreateReservationRequest:
+      type: object
+      required:
+        - customerId
+        - tableId
+        - reservationDate
+        - startTime
+        - endTime
+
+      properties:
+
+        customerId:
+          type: integer
+
+        tableId:
+          type: integer
+
+        reservationDate:
+          type: string
+          format: date
+
+        startTime:
+          type: string
+
+        endTime:
+          type: string
