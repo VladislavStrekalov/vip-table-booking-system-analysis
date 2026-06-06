@@ -78,7 +78,7 @@
 
 ### Use Case Diagram
 
-![Use Case Diagram](diagrams/use-casea-diagram.png)
+![Use Case Diagram](diagrams/use-cases-diagram.png)
 
 ### Sequence Diagram
 
