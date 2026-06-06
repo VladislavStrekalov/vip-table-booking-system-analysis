@@ -1,0 +1,21 @@
+@startuml
+
+actor Customer as "Клиент"
+
+participant BookingSystem as "Система бронирования"
+
+database DB as "База данных"
+
+Customer -> BookingSystem: Создать бронирование
+
+BookingSystem -> DB: Проверить доступность столика
+
+DB --> BookingSystem: Столик свободен
+
+BookingSystem -> DB: Сохранить бронирование
+
+DB --> BookingSystem: Бронирование создано
+
+BookingSystem --> Customer: Подтверждение бронирования
+
+@enduml
